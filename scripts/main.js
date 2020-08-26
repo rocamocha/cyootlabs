@@ -1,7 +1,8 @@
 $(document).ready(function() {
-    $(".landing-text").css("color", "green");
+    $(".landing-text").hide();
   };
 });
 
 $(".landing-content").mouseenter(function() {
   $(".landing-text").fadein(2000);
+}
