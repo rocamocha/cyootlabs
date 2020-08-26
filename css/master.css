@@ -2,7 +2,7 @@
   --nav-stripe-bar-width: 25%;
   --nav-stripe-bar-height: 16px;
   --nav-stripe-shadow-size: 50px;
-  --landing-text-font-size: 24px;
+  --landing-text-font-size: 5vw;
 }
 html, body {
   height: 100%;
@@ -42,19 +42,17 @@ html, body {
 }
 .landing-text {
   color: white;
-}
-.landing-text::before {
-  content: "TAP AGAIN";
-  font-family: 'Do Hyeon', sans-serif;
   font-size: var(--landing-text-font-size);
+  font-family: 'Do Hyeon', sans-serif;
+}
+#landing-text-left {
+  content: "TAP AGAIN";
   position: fixed;
   left: 3%;
   top: 46%;
 }
-.landing-text::after {
+#landing-text-right {
   content: "TO ENTER";
-  font-family: 'Do Hyeon', sans-serif;
-  font-size: var(--landing-text-font-size);
   position: fixed;
   right: 3%;
   top: 52.6%;
@@ -120,7 +118,7 @@ html, body {
     border-width: 16px;
     box-shadow: 0px 0px 0px 6px #000;
   }
-  .landing-text::before {
+  #landing-text-left {
     content: "ENTER";
     font-family: 'Do Hyeon', sans-serif;
     font-size: var(--landing-text-font-size);
@@ -128,7 +126,7 @@ html, body {
     left: 1%;
     top: 44%;
   }
-  .landing-text::after {
+  #landing-text-right {
     content: "THE LAB";
     font-family: 'Do Hyeon', sans-serif;
     font-size: var(--landing-text-font-size);
