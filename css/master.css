@@ -1,7 +1,7 @@
 :root {
   --nav-stripe-bar-width: 25%;
   --nav-stripe-bar-height: 16px;
-  --nav-stripe-shadow-size: 50px;
+  --nav-stripe-shadow-size: 40px;
   --landing-text-font-size: 5vw;
 }
 html, body {
@@ -45,13 +45,13 @@ html, body {
   font-size: var(--landing-text-font-size);
   font-family: 'Do Hyeon', sans-serif;
 }
-#landing-text-left {
+.landing-text::before {
   content: "TAP AGAIN";
   position: fixed;
   left: 3%;
   top: 46%;
 }
-#landing-text-right {
+.landing-text::after {
   content: "TO ENTER";
   position: fixed;
   right: 3%;
@@ -118,7 +118,7 @@ html, body {
     border-width: 16px;
     box-shadow: 0px 0px 0px 6px #000;
   }
-  #landing-text-left {
+  .landing-text::before {
     content: "ENTER";
     font-family: 'Do Hyeon', sans-serif;
     font-size: var(--landing-text-font-size);
@@ -126,7 +126,7 @@ html, body {
     left: 1%;
     top: 44%;
   }
-  #landing-text-right {
+  .landing-text::after {
     content: "THE LAB";
     font-family: 'Do Hyeon', sans-serif;
     font-size: var(--landing-text-font-size);
