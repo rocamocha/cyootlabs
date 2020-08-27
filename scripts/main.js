@@ -1,10 +1,13 @@
+var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+console.log(isTouch);
+
 $(document).ready(function() {
-  $(".landing-text").hide();
+  //$(".landing-text").hide();
 
   $(".landing-content").mouseenter(function() {
-    $(".landing-text").fadeIn(1000);
+    $(".landing-text").css("transition", "color 1700ms");
   });
   $(".landing-content").mouseleave(function() {
-    $(".landing-text").fadeOut(200);
+    $(".landing-text").css("transition", "color 300ms");
   });
 });

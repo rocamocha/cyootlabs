@@ -13,7 +13,7 @@ html, body {
 .wrapper {
   overflow-x: hidden;
 }
-.landing-content {
+.landing-content { /*the circle button that the user sees on the landing page*/
   position: fixed;
   top: 50%;
   left: 50%;
@@ -24,7 +24,7 @@ html, body {
   font-size: 32px;
   border-radius: 50%;
 
-  border: 8px solid #ff9bd8;
+  border: 8px solid #f19da8;
   color: #0f0;
   background-color: #8ffbff;
   box-shadow: 0px 0px 0px 6px #000;
@@ -39,20 +39,21 @@ html, body {
   border-radius: inherit;
   background-color: transparent;
   box-shadow: inset 0px 0px 12px 4px #066;
-}
+} /*for creating the inset shadow of the circle*/
 .landing-text {
-  color: white;
+  color: transparent;
   font-size: var(--landing-text-font-size);
   font-family: 'Do Hyeon', sans-serif;
-}
+  /*transition property for this class is set by jQuery*/
+} /*the text seen when the circle is hovered over*/
 .landing-text::before {
-  content: "TAP AGAIN";
+  content: "ENTER";
   position: fixed;
   left: 3%;
   top: 46%;
 }
 .landing-text::after {
-  content: "TO ENTER";
+  content: "THE LAB";
   position: fixed;
   right: 3%;
   top: 52.6%;
@@ -91,10 +92,10 @@ html, body {
   transform: skewX(-60deg);
 }
 .landing-content:hover {
-  box-shadow: 0px 0px 0px 6px #3AF;
+  box-shadow: 0px 0px 0px 6px #3CB;
 }
 .landing-content:hover + .nav-stripe {
-  background-color: #3AF;
+  background-color: #3CB;
   box-shadow: 0px 0px 0px var(--nav-stripe-shadow-size) #000;
 }
 .landing-content:hover > .landing-text {
