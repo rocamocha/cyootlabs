@@ -2,8 +2,12 @@
   --nav-stripe-bar-width: 25%;
   --nav-stripe-bar-height: 16px;
   --nav-stripe-enter-margin: calc(var(--nav-stripe-bar-height) + 2vh);
+  --nav-full-height: calc(var(--nav-stripe-bar-height) + var(--nav-stripe-enter-margin));
   --nav-stripe-shadow-size: 40px;
   --landing-text-font-size: 4vw;
+
+  /* --- COLORS --- */
+  --color-yellow: #f8f88b;
 }
 /*----------------------------------------------------------------------------------------*/
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -21,21 +25,18 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0;
-  background-color: #f8f88b;
+  background-color: var(--color-yellow);
 }
 
 /* --- LANDING PAGE STUFF --- */
-.wrapper {
-  overflow-x: hidden;
-}
 .landing-content { /*the circle button that the user sees on the landing page*/
   position: fixed;
   top: 50%;
   left: 50%;
-  margin-top: -76px;
-  margin-left: -68px;
-  width: 128px;
-  height: 128px;
+  margin-top: calc(-11vmin - 8px);
+  margin-left: calc(-11vmin - 8px);
+  width: 22vmin;
+  height: 22vmin;
   font-size: 32px;
   border-radius: 50%;
   border: 8px solid #f19da8;
@@ -60,6 +61,7 @@ html, body {
   color: transparent;
   transition: top 3s, opacity 600ms;
   animation: landing-text-fadein 500ms linear 1s forwards;
+  touch-action: zoom;
 }
 #lt-left {
   position: fixed;
@@ -81,6 +83,7 @@ html, body {
   height: 8px;
   z-index: 9;
   animation: nav-stripe-glow 2s -1s infinite, nav-stripe-expand 600ms linear forwards;
+  touch-action: none;
 }
 .nav-stripe::before { /*this is the left side skewed strip on the black stripe*/
   position: absolute;
@@ -105,6 +108,23 @@ html, body {
 }
 
 /* --- MAIN CONTENT --- */
+nav {
+  touch-action: none;
+  position: fixed;
+  background-color: var(--color-yellow);
+  top: 0;
+  height: var(--nav-stripe-enter-margin);
+  width: 100%;
+  z-index: 1;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 5vh;
+  width: 100%;
+  background-color: var(--color-yellow);
+  z-index: 9;
+}
 .content-wrapper {
   position: absolute;
   width: 100%;
@@ -112,6 +132,21 @@ html, body {
   top: 50%;
   background-color: black;
   z-index: 0;
+}
+.content-door {
+  position: absolute;
+  color: green;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  background-color: var(--color-yellow);
+  z-index: 8;
+}
+main {
+  color: white;
+  margin: auto;
+  margin-top: 20%;
+  width: 80%;
 }
 
 /* --- ANIMATIONS --- */
@@ -151,6 +186,11 @@ html, body {
       height: 100%;
     }
 }
+@keyframes content-door-open {
+  100% {
+    height: 0;
+  }
+}
 
 /* for when the landing page button is clicked*/
 @keyframes landing-content-enter {
@@ -159,12 +199,13 @@ html, body {
     }
 }
 @keyframes nav-stripe-enter {
+
   0%{
     box-shadow: 0px 0px 0px var(--nav-stripe-shadow-size) #000;
   }
   100%{
     top: var(--nav-stripe-enter-margin);
-    box-shadow: 0px 0px 0px 0px #000;
+    box-shadow: 0px calc(var(--nav-stripe-shadow-size) / 2) 0px calc(var(--nav-stripe-shadow-size) / 2) #222;
   }
 }
 
@@ -174,14 +215,14 @@ html, body {
   :root {
     --nav-stripe-bar-width: 20%;
     --nav-stripe-bar-height: 24px;
-    --nav-stripe-shadow-size: 100px;
-    --landing-text-font-size: 56px;
+    --nav-stripe-shadow-size: 10vmin;
+    --landing-text-font-size: 3vw;
   }
   .landing-content {
-    width: 384px;
-    height: 384px;
-    margin-top: -208px;
-    margin-left: -192px;
+    width: 20vw;
+    height: 20vw;
+    margin-top: calc(-10vw - 16px);
+    margin-left: calc(-10vw - 16px);
     border-width: 16px;
     box-shadow: 0px 0px 0px 6px #000;
     transition: box-shadow 1s;
@@ -197,11 +238,11 @@ html, body {
     animation: unset;
   }
   #lt-left {
-    left: 1%;
-    top: 42%;
+    left: 15%;
+    top: calc(48% - var(--landing-text-font-size));
   }
   #lt-right {
-    right: 1%;
+    right: 17%;
     top: 51%;
   }
 
