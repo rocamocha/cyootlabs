@@ -1,0 +1,77 @@
+/* --- LANDING PAGE STUFF --- */
+.landing-content { /* the circle button that the user sees on the landing page */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: calc(-11vmin - 8px);
+    margin-left: calc(-11vmin - 8px);
+    width: 22vmin;
+    height: 22vmin;
+    font-size: 32px;
+    border-radius: 50%;
+    border: 8px solid var(--color-pink);
+    background-color: var(--color-blue);
+    z-index: 10;
+    animation: landing-content-glow 2s -1s infinite;
+}
+.landing-shadow {/* for creating the inset shadow of the circle */
+    position: fixed;
+    content: "";
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background-color: transparent;
+    box-shadow: inset 0px 0px 12px 4px #066;
+}
+.landing-text { /* the welcome text */
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: var(--landing-text-font-size);
+    position: absolute;
+    color: transparent;
+    transition: top 3s, opacity 600ms;
+    animation: landing-text-fadein 500ms linear 1s forwards;
+    touch-action: zoom;
+}
+#lt-left {
+    position: fixed;
+    left: 2%;
+    top: 46%;
+}
+#lt-right {
+    position: fixed;
+    right: 2%;
+    top: 51.3%;
+}
+.nav-stripe { /* the horizontal stripe across the screen */
+    position: fixed;
+    background-color: #000;
+    top: 50%;
+    margin-top: -4px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    z-index: 9;
+    animation: nav-stripe-glow 2s -1s infinite, nav-stripe-expand 600ms linear forwards;
+    touch-action: none;
+}
+.nav-stripe::before { /* this is the left side skewed strip on the black stripe */
+    position: absolute;
+    content: "";
+    background-color: inherit;
+    top: 50%;
+    left:-8%;
+    width: var(--nav-stripe-bar-width);
+    height: var(--nav-stripe-bar-height);
+    transform: skewX(-60deg);
+}
+.nav-stripe::after { /* this is the right side skewed strip on the black stripe */
+    position: absolute;
+    content: "";
+    background-color: inherit;
+    top: 50%;
+    margin-top: calc(-1 * var(--nav-stripe-bar-height));
+    right:-8%;
+    width: var(--nav-stripe-bar-width);
+    height: var(--nav-stripe-bar-height);
+    transform: skewX(-60deg);
+}

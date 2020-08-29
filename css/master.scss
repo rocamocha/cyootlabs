@@ -1,0 +1,38 @@
+/* --------------------------------------------------------------------------------------------- */
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-overflow::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-overflow {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+/* --------------------------------------------------------------------------------------------- */
+
+:root {
+  --nav-stripe-bar-width: 25%;
+  --nav-stripe-bar-height: 16px;
+  --nav-stripe-enter-margin: calc(var(--nav-stripe-bar-height) + 2vh);
+  --nav-full-height: calc(var(--nav-stripe-bar-height) + var(--nav-stripe-enter-margin));
+  --nav-stripe-shadow-size: 40px;
+  --landing-text-font-size: 4vw;
+
+  /* --- COLORS --- */
+  --color-yellow: #f8f88b;
+  --color-pink: #f19da8;
+  --color-blue: #8ffbff;
+  --color-glow: #3cb;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: black;
+}
+
+@import "./landing";
+@import "./content";
+@import "./animations";
+@import "./desktop";
