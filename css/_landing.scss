@@ -1,5 +1,8 @@
 /* --- LANDING PAGE STUFF --- */
 .landing-content { /* the circle button that the user sees on the landing page */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -7,21 +10,20 @@
     margin-left: calc(-11vmin - 8px);
     width: 22vmin;
     height: 22vmin;
-    font-size: 32px;
     border-radius: 50%;
     border: 8px solid var(--color-pink);
-    background-color: var(--color-blue);
+    //background-color: var(--color-blue);
+    background-color: black;
     z-index: 10;
     animation: landing-content-glow 2s -1s infinite;
-}
-.landing-shadow {/* for creating the inset shadow of the circle */
-    position: fixed;
-    content: "";
-    width: inherit;
-    height: inherit;
-    border-radius: inherit;
-    background-color: transparent;
-    box-shadow: inset 0px 0px 12px 4px #066;
+
+    img {
+        width: 50%;
+        height: 50%;
+        transform: translateX(-3.5%);
+        transition: opacity 2s 300ms;
+        opacity: 0;
+    }
 }
 .landing-text { /* the welcome text */
     font-family: 'Do Hyeon', sans-serif;

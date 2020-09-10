@@ -47,12 +47,16 @@
 //&&&,,..,////(((&&&&&&&&&&&&%//********%*%*%////*%&&&&&&&*%////////////&&&&****,,,,,,,,,,,,,,,,,,*/
 
 /* --- DESKTOP STYLING ------------------------------------------------------------------------- */
-@media (min-device-width : 768px) {
+@media (min-device-width : 1025px) {
     :root {
         --nav-stripe-bar-width: 20%;
         --nav-stripe-bar-height: 24px;
         --nav-stripe-shadow-size: 10vmin;
         --landing-text-font-size: 3vw;
+    }
+    footer {
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
     }
     .landing-content {
         width: 20vw;
@@ -70,7 +74,7 @@
         animation: unset;
     }
     .nav-stripe { /*the horizontal stripe across the screen*/
-        transition: background-color 1s, box-shadow 1s;
+        transition: background-color 1s, box-shadow 600ms;
         animation: unset;
     }
     #lt-left {
@@ -80,6 +84,42 @@
     #lt-right {
         right: 17%;
         top: 51%;
+    }
+    #content {
+        font-size: 2em;
+        padding-top: 3vh;
+        h1 {
+            font-size: 2em;
+            text-align: left;
+        }
+    }
+    .test-tube {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .exp-spacer {
+        height: 8vh;
+    }
+    .exp-image, .exp-video {
+        max-width: 25vw;
+    }
+    .exp-container {
+        padding-bottom: 0;
+    }
+    .socials {
+        a {
+            width: 6vmin;
+            height: 6vmin;
+        }
+    }
+    .menu-pointer {
+        left: 30%
+    }
+
+    .fcf-body {
+        max-width: 60%;
+        margin: auto;
     }
   
     /* --- INTERACTIVITY --- */

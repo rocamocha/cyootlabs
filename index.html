@@ -2,29 +2,37 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Hey there, cyootie patootie! We've got fresh sounds for all lab visitors!">
+    <meta name="keywords" content="Music, Production, Samplepack, Cute, Kawaii, Electronic, rocamocha, Hawaii, Entertainment, Presonus">
     <meta name="author" content="rocamocha">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="og:image" content="https://cyootlabs.net/images/og-image.png">
+    <meta name="og:description" content="Hey there, cyootie patootie!">
+    <meta name="og:title" content="Welcome to Cyoot Labs 🍓🥝">
+    <link rel="icon" href="images/cyootlabs-face-stripped.svg" sizes="any" type="image/svg+xml">
+    <title>Cyoot Labs</title>
+
     <!-- JAVASCRIPT LINK -->
-    <script src="./scripts/main.js"></script>
+    <script src="scripts/main.js?v=8"></script>
 
     <!-- STYLESHEET LINK -->
-    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="css/master.css?v=5">
 
     <!-- WEB FONT IMPORTS -->
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/odf0cdz.css">  
   </head>
 
   <body class="no-overflow">
     <div class="wrapper">
-      <nav class="nav-door">
-        NAV TAG
-      </nav>
+      <div class ="menu-pointer">MENU ►</div>
+      <nav class="nav-door"></nav>
       <div class="landing-content touch-on" id="landing-content">
-        <div class="landing-shadow">
-        </div>
+        <img class="cyootface" src="images/cyootlabs-face-stripped.svg" alt="">
+        <div class="loader1"></div>
+        <div class="loader2"></div>
         <div class="landing-text">
           <div class="landing-text" id="lt-left">WELCOME TO</div>
           <div class="landing-text" id="lt-right">CYOOT LABS</div>
@@ -34,14 +42,40 @@
         <div class="nav-deco-left"></div>
         <div class="nav-deco-right"></div>
       </div>
+      <!-- SOCIAL MEDIA LINKS -->
+      <div class="socials">
+        <a href="https://www.instagram.com/cyootlabs/" target="_blank" class="social-button">
+          <img src="images/733592-social/svg/034-instagram.svg" alt="">
+        </a>
+        <a href="https://twitter.com/cyootlabs" target="_blank" class="social-button">
+          <img src="images/733592-social/svg/013-twitter-1.svg" alt="">
+        </a>
+        <a href="https://open.spotify.com/artist/5xW7RQctwMQR7oJ4AeVSvO?si=5dFJQ6BhQMSQIfvcajdmZQ" target="_blank" class="social-button">
+          <img src="images/733592-social/svg/019-spotify.svg" alt="">
+        </a>
+        <a href="https://www.youtube.com/channel/UCJRK5XvOOemj53raHV9v4dA" target="_blank" class="social-button">
+          <img src="images/733592-social/svg/002-youtube.svg" alt="">
+        </a>
+        <a href="https://soundcloud.com/rocamocha" target="_blank" class="social-button">
+          <img src="images/733592-social/svg/020-soundcloud.svg" alt="">
+        </a>
+      </div>
       <div class="content-wrapper">
-        <main id='content'>
+        <main id="content">
           <!-- content is injected into this element locally through fetch() -->
           It looks like your browser doesn't support this website!
         </main>
+        <div id="spacer"></div>
       </div>
-      <div class="content-door"></div>
-      <footer>FOOTER IS HERE</footer>
+      <!-- THE ID'S HERE MUST MATCH IN THE JAVASCRIPT FILE -->
+      <div class="content-door touch-on">
+        <div style="width: 100%; height: 15%;"></div>
+        <div class="nav-item touch-on" id="experiments">experiments</div>
+        <div class="nav-item touch-on" id="samplepack">samplepack</div>
+        <!-- <div class="nav-item" id="contact">contact</div> -->
+        <div class="nav-item touch-on" id="about">about</div>
+      </div>
+      <footer>&#169;CYOOT LABS LLC </footer>
     </div>
   </body>
 </html>

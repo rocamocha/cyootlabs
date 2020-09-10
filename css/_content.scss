@@ -10,11 +10,18 @@ nav {
 }
 footer {
     position: fixed;
+    font-family: canada-type-gibson, sans-serif;
+    color: transparent;
+    transition: color 3s;
     bottom: 0;
+    line-height: 2em;
     height: 5vh;
     width: 100%;
     background-color: var(--color-yellow);
     z-index: 9;
+}
+.wrapper {
+    font-family: canada-type-gibson, sans-serif;
 }
 .content-wrapper {
     position: absolute;
@@ -24,26 +31,51 @@ footer {
     top: 50%;
     background-color: black;
     z-index: 0;
+    filter: none;
+    transition: filter 1s;
 }
-.content-door {
-    position: absolute;
-    color: green;
+.menu-pointer {
+    position: fixed;
+    font-size: 16px;
+    top: 0;
+    left: 10%;
+    color: transparent;
+    transition: color 3s;
+    z-index: 12;
+}
+.content-door { //also acts as the navigation screen
+    position: fixed;
+    font-family: canada-type-gibson, sans-serif;
+    font-size: 2.5em;
     width: 100%;
     height: 50%;
     bottom: 0;
     background-color: var(--color-yellow);
     z-index: 8;
-}
+  }
 #content {
-    position: relative;
+    position: static;
     color: white;
+    font-family: canada-type-gibson, sans-serif;
+    font-size: 1.25em;
     margin: auto;
-    top: 5vw;
-    width: 80%;
-    overflow-wrap: anywhere;
-    font-size: 100px;
+    // width: 80%;
+    max-width: 80%;
+    h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    p {
+        line-height: 1.25em;
+    }
 }
-iframe {
+#spacer {
+    position: static;
     width: 100%;
-    height: 100%;
+    height: 10vh;
+    //background-color: lawngreen;
+}
+
+h1 {
+    font-size: 3em;
 }

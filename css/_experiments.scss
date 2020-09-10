@@ -1,0 +1,61 @@
+.exp-container {
+    text-align: center;
+    user-select: none;
+    padding-bottom: 10%;
+    a {
+        user-select: none;
+        display: inline-block;
+        text-decoration: none;
+        font: normal 500 16px "canada-type-gibson", sans-serif;
+        letter-spacing: 0.2em;
+        //border-radius: 500px;
+        border-width: 2px;
+        padding: 8px 0px 8px;
+        width: 99%;
+        color: white;
+        overflow-wrap: anywhere;
+    }
+}
+.btn-blue {
+    border-style: solid;
+    border-color: navy;
+    background-color: rgb(0, 44, 139);
+    &:hover {
+        background-color: rgb(0, 76, 255);
+    }
+}
+.btn-green {
+    border-style: solid;
+    border-color: green;
+    background-color: #1db151;
+    &:hover {
+        background-color: #4bdf80;
+    }
+}
+.btn-red {
+    border-style: solid;
+    border-color: darkred;
+    background-color: #aa1000;
+    &:hover {
+        background-color: #cc3333;
+    }
+}
+.btn-orange {
+    border-style: solid;
+    border-color: rgb(209, 121, 13);
+    background-color: darkorange;
+    &:hover {
+        background-color: orange;
+    }
+}
+.btn-pink {
+    border-style: solid;
+    border-color: rgb(192, 38, 115);
+    background-color: var(--color-pink);
+    &:hover {
+        background-color: pink;
+    }
+}
+.exp-video {
+    max-width: 100%;
+}
