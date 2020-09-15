@@ -10,9 +10,9 @@ var getHtmlFragments = async (url) => { //loads html into fragments using fetch(
         console.log(fragments);
         console.log(fragments[url].childElementCount);
   });
-  setStyle('.loader1', 'opacity', '0');
-  setStyle('.loader2', 'opacity', '0');
-  setStyle('.landing-content img', 'opacity', '1');
+  setStyle('.loader1', 'opacity', '0'); //outer loading circle
+  setStyle('.loader2', 'opacity', '0'); //inner loading circle
+  setStyle('.landing-content img', 'opacity', '1'); //face
   fragmentsLoaded = true;
 }
 
@@ -23,7 +23,13 @@ var scrollPos;
 
 
 window.addEventListener('load', (event) => {
-  getPage('experiments.html'); //load the landing page onto the screen
+  for (const search of ['samplepack','about']) {
+    if (location.href.search(search) !== -1) {
+      getPage(search + '.html');    
+    } else {
+      getPage('experiments.html'); //load the landing page onto the screen
+    }
+  }
   currentPage = ('experiments.html')
   navItems.forEach(e => getHtmlFragments(html(e))); //load all pages into memory to reduce loading time between navigation
 
@@ -74,7 +80,6 @@ window.addEventListener('load', (event) => {
           loadPage(currentPage); // load the last page since no navigation was selected
           let scrollpos = sessionStorage.getItem('scrollpos');
           if (scrollpos) window.scrollTo(0, scrollpos);
-
           navOpen = false;
         }
       }
@@ -178,11 +183,11 @@ function openDoor() {
   setStyle('footer', 'color', 'black');
   setStyle('.nav-item', 'color', 'white');
   setStyle('.menu-pointer', 'color', '#b8b84b');
+  setStyle('#link-plain-html', 'display', 'none');
 
   setTimeout(function() {
     document.querySelector('.content-wrapper').classList.add('touch-on');
     document.querySelector('#content').classList.add('touch-on');
-    // enableTouch(); // needs to be called again to re-evaluate touch-enabled elements
     !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/7212e76da953ad2b1f9d5425f/bf1eeb8f1e6c87029f7622556.js");
 
     console.log('Doors opened!');

@@ -1,18 +1,71 @@
 <!-- INJECTED INTO A MAIN TAG ALREADY -->
+<script type="text/javascript">
+function readMore() {
+    document.getElementById('read-more').innerHTML = `
+        <p class="wordstyle" style="text-align: justify;">
+            ROCAMOCHA grew up listening to a wide variety of music styles growing up.
+            Having been born in Sacramento, CA to teenage parents in 1996 and surrounded by a large music-loving extended family,
+            his musical experience in the formative years of his life was multigenerational and diverse. Between the ages of 4 and 6,
+            ROCAMOCHA participated as a bit of an unruly piano student at the Masaki School of Music in Honolulu. The lessons had
+            ended long before his family would move back to California and it would be years before formal education in music performance
+            was revisited. When faced with a choice between study hall and band class before entering the sixth grade at
+            Cooley Middle School in Roseville, CA - ROCAMOCHA chose band class, with the Trumpet as his instrument of choice.
+        <br>
+        <br>
+            Jazz and composition became the centerpieces of ROCAMOCHA's musical studies throughout this time. ROCAMOCHA's parents applied
+            for an intra-district transfer to Rio Americano High School, about a 40 minute drive from where they lived.
+            ROCAMOCHA was fortunate to have the opportunity to tour with musical groups in Japan and Spain, in addition to performing at
+            some of the most widely recognized jazz festivals in the United States both as a trumpeter and a bassist.
+        <br>
+        <br>
+            Despite suffering a collapsed lung in his senior year of high school, ROCAMOCHA was able to make his audition for the
+            Berklee College of Music and was nominated for one of 5 presidential scholarship awards from the school. It was the
+            only institution that he had applied to. ROCAMOCHA received a dual degree in Contemporary Writing and Production &
+            Professional Music with a Concentration in Video Game Scoring after 6 years of study.
+        <br>
+        <br>
+            ROCAMOCHA now focuses on making electronic music that stays true to his enthusiasm for all things cute 🍓🥝
+        </p>`
+
+        dynamicColor();
+}
+function dynamicColor() {
+    var tables = document.getElementsByClassName('wordstyle');
+    for(var i = 0; i < tables.length; i++)
+    {
+        var s = tables[i].innerHTML;
+        ['ROCAMOCHA'].forEach(e => {
+            s = s.replace(RegExp(e, 'g'), '<span style="color: var(--color-pink);">' + e + '</span>');
+        });
+        ['1996','Berklee College of Music', 'Rio Americano High School','Honolulu','California'].forEach(e => {
+            s = s.replace(RegExp(e, 'g'), '<span style="color: var(--color-yellow);">' + e + '</span>');
+        });
+        ['Japan', 'Spain'].forEach(e => {
+            s = s.replace(RegExp(e, 'g'), '<span style="color: var(--color-blue);">' + e + '</span>');
+        });
+        tables[i].innerHTML = s;
+
+        
+    }
+}
+</script>
 <h1>about</h1>
 <img src="images/banner1.png" alt="" style="border: 1px solid white;">
-<p class="wordstyle" style="text-align: justify;">
-    At the heart of our operations in Kapolei, Hawaii - <span style="color: var(--color-pink);">ROCAMOCHA</span>
-    is working hard to bring sonic refreshment to your brainspace through music.
-</p>
-<p class="wordstyle" style="text-align: justify;">
-    Using the knowledge acquired through his studies as a presidential scholar at the
-    <span style="color: var(--color-yellow)">Berklee College of Music,</span>
-    <span style="color: var(--color-pink);">ROCAMOCHA</span> carefully extracts the ingredients from the
-    tastiest and also the cutest music to deliver a combination of sounds
-    that are sure to make you smile!
-</p>
-<hr>
+<div>
+    <img class="portrait" src="images/portrait.png" alt="portrait of rocamocha">
+    <p class="wordstyle" style="text-align: justify;">
+        At the heart of our operations in Kapolei, Hawaii - <span style="color: var(--color-pink);">ROCAMOCHA</span>
+        is working hard to bring sonic refreshment to your brainspace through music.
+    </p>
+    <p class="wordstyle" style="text-align: justify;">
+        Using the knowledge acquired through his studies as a presidential scholar at the
+        <span style="color: var(--color-yellow)">Berklee College of Music,</span>
+        <span style="color: var(--color-pink);">ROCAMOCHA</span> carefully extracts the ingredients from the
+        tastiest and also the cutest music to deliver a combination of sounds
+        that are sure to make you smile!
+    </p>
+</div>
+<hr style="clear: left;">
 <p class="wordstyle" style="text-align: justify;">
     <span style="color: var(--color-pink);">ROCAMOCHA</span>'s first single,
     <span style="color: var(--color-blue);">The Perfect Smoothie</span>
@@ -22,6 +75,9 @@
     <span style="color: var(--color-pink);">ROCAMOCHA</span>
     is scheduled to release September 23rd.
 </p>
+<div id="read-more">
+    <p onclick="readMore();"><u>Read more...</u></p>
+</div>
 <p style="font-size: x-small; color: #444;">
     Social icons by <a style="color: #444;" href="https://www.flaticon.com/authors/pixel-perfect">Pixel Perfect</a> 
 </p>

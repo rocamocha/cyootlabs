@@ -67,6 +67,7 @@
         box-shadow: 0px 0px 0px 6px #000;
         transition: box-shadow 1s;
         animation: unset;
+        cursor: pointer;
     }
     .landing-text { /*the text seen when the circle is hovered over*/
         transition: color 200ms, top 3s, opacity 600ms;
@@ -126,11 +127,11 @@
     .landing-content:hover {
         box-shadow: 0px 0px 0px 6px var(--color-glow);
     }
-    .landing-content:hover + .nav-stripe {
+    .landing-content:hover ~ .nav-stripe {
         background-color: var(--color-glow);
         box-shadow: 0px 0px 0px var(--nav-stripe-shadow-size) #000;
     }
-    .landing-content:hover .landing-text {
+    .landing-content:hover ~ .landing-text {
         transition: color 1s, top 3s, opacity 600ms;
         // transition-delay: 500ms;
         color: white;

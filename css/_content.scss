@@ -36,10 +36,10 @@ footer {
 }
 .menu-pointer {
     position: fixed;
+    color: transparent;
     font-size: 16px;
     top: 0;
     left: 10%;
-    color: transparent;
     transition: color 3s;
     z-index: 12;
 }
@@ -78,4 +78,11 @@ footer {
 
 h1 {
     font-size: 3em;
+}
+
+.portrait {
+    float: left;
+    max-height: 40vh;
+    margin-bottom: 2%;
+    margin-right: 2%;
 }

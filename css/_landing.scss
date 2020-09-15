@@ -1,4 +1,12 @@
 /* --- LANDING PAGE STUFF --- */
+#link-plain-html {
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #b8b84b;
+    text-decoration: none;
+    z-index: 12;
+}
 .landing-content { /* the circle button that the user sees on the landing page */
     display: flex;
     align-items: center;
@@ -33,6 +41,7 @@
     transition: top 3s, opacity 600ms;
     animation: landing-text-fadein 500ms linear 1s forwards;
     touch-action: zoom;
+    z-index: 12;
 }
 #lt-left {
     position: fixed;
